@@ -49,3 +49,7 @@
 | L-0043 | 2026-08-28 | correction | **PREMISE FALSIFIED** — 6 competitors verified incl. `github/spec-kit` 132,004 stars and `nexus-agents` (near-identical pitch, pushed today). A bundle, not a category |
 | L-0044 | 2026-08-28 | correction | Formal verification is **high-value low-volume, not dead** (Certora, Runtime Verification $30–50k/mo). Sonar $4.7B, Tricentis $4.5B. **Payer≠adopter SURVIVED** |
 | L-0045 | 2026-08-28 | correction | Interviews measure statements, not purchases. Need a **paid behavioural test**; "abandonment under real latency" is the risk. Next milestone is not a UI |
+| L-0046 | 2026-08-28 | finding | **Nexus ships 6 of 7 v2 mechanisms** — read at source. Hash-chained audit beats the Markdown ledger. Gaps: M4, E3, refusal |
+| L-0047 | 2026-08-28 | correction | **Both my bias-kills OVERTURNED** — Datadog $3.43B ends the "just bug fixes" argument; Stripe Radar 32% ends the "refusal is dangerous" one |
+| L-0048 | 2026-08-28 | finding | "Nobody has this combination" is **trivia** — aggregation, not strategic fit (Porter). M4 unfalsifiable, M5 table stakes, M7 a setting |
+| L-0049 | 2026-08-28 | decision | **THE GOLD: repo-specific recurrence prevention.** One wedge, not seven features. The only item that accumulates uncopyable per-customer data |

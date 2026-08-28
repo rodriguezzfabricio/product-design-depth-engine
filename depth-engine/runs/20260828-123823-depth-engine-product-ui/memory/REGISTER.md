@@ -2,7 +2,7 @@
 
 > One row per tracked item (question / task / risk / aspect / sub-question). Status drives convergence (E8). Append rows and update their status; never delete a row (L-B). On resume, the first `open` or `in-progress` row is where you continue.
 
-**Closed list: 42 rows · 18 covered · 9 in-progress · 15 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
+**Closed list: 46 rows · 19 covered · 10 in-progress · 17 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
 
 > **Counted mechanically, not by hand.** A hand-written header on this file initially read "25 rows · 8 · 5 · 12" and was wrong in all four numbers. The error was caught by `grep -c` against the status cells, not by review. That is the Tier-0 argument from the prior report §6 in miniature: the mechanical check is the only reproducible one, and it should own this header. **If the UI renders a coverage bar, it must count the rows itself — never trust a summary line, including this one.**
 
@@ -52,3 +52,7 @@
 | S17 · Is the payer different from the adopter? | sub-question | **covered** | L-0041, L-0044 | **SURVIVED cross-family attack** — the only conclusion in this run that did. Enterprises/security/regulated bear failure cost |
 | R6 · L-A unsatisfied on the market pass | risk | **covered** | L-0043 | Re-run after credits restored. All 3 claims OVERTURNED |
 | S18 · Paid behavioural test (pilot or preorder) | sub-question | **open** | L-0045 | Replaces "do interviews" as the validation step. Money changing hands is the only settling evidence |
+| S19 · Does v2 differentiate? Feature map vs competitors | sub-question | **in-progress** | L-0046 | Nexus ships 6 of 7. Only 1 of 6 competitors read at source — Spec Kit, Sigil, Findry, Kiro, Augment still unread |
+| S20 · The wedge: repo-specific recurrence prevention | decision | **covered** | L-0049 | The one item that accumulates proprietary data and creates switching cost. Untested |
+| S21 · Refusal made evidence-linked and appealable | sub-question | **open** | L-0047 | Refusal sells (Stripe Radar 32%) but must be scoped and appealable, not uncalibrated |
+| S22 · Define an evaluation method for "lossless" (M4) | sub-question | **open** | L-0048 | Unfalsifiable slogan until loss is measurable. Define it or drop M4 |
