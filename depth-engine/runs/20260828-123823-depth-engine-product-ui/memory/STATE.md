@@ -31,7 +31,7 @@ Four of nine sub-questions have evidence; the decision is **NOT converged**. E8 
 **CONTINUE** — next unambiguous action is S6: research whether a browser surface helps or fragments attention for a developer already supervising an agent in a terminal, then S2. Do not run E8 before both have evidence.
 
 ### Ledger status
-Highest ID in Ledger: **L-0023** · Index rows: **23** · invariant (i) holds.
+Highest ID in Ledger: **L-0025** · Index rows: **25** · invariant (i) holds.
 
 ### Blocked items
 - **Q4 repo identity** — operator answered *"totally diff and new repo and make it private"*, which names no repository. `[unknown]`. Blocks any E2 research treating engine source as authoritative, and blocks any action that would create or move repositories. Does not block the shell decision.

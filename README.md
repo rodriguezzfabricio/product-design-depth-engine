@@ -35,14 +35,31 @@ Coverage: **11 covered · 5 in-progress · 11 open**, out of a closed list of 27
 
 ## Layout
 
+This is the product monorepo: the engine, the design work, and the UI in one place.
+
 ```
-research/                     the four research artifacts
-depth-engine/runs/<run-id>/
-├── artifacts/                seed.md, intent_brief.md, preserved sources
-└── memory/                   LEDGER · STATE · INDEX · REGISTER
+engine/                       the Depth Engine source (git subtree, upstream: rodriguezzfabricio/depth-engine)
+ui/                           the product surface — not built yet, see ui/README.md
+research/                     research and decision records (01–05)
+depth-engine/                 CLI-managed run workspace — do not hand-edit
+└── runs/<run-id>/
+    ├── artifacts/            seed.md, intent_brief.md, decision_subquestions.md, sources
+    └── memory/               LEDGER · STATE · INDEX · REGISTER
 ```
 
 `memory/` is the run's append-only record. `LEDGER.md` is the audit trail — every finding, null-result, and correction with its evidence. `STATE.md` is where to resume.
+
+### On `engine/`
+
+Vendored with `git subtree`, not a submodule — the files are simply present, so a plain `git clone` on any machine gets everything with no `--recursive` footgun. Pinned at upstream `3b48cb4` (v0.1.0).
+
+**This copy is not the canonical engine.** Upstream is `rodriguezzfabricio/depth-engine`. To sync:
+
+```bash
+git subtree pull --prefix=engine https://github.com/rodriguezzfabricio/depth-engine.git main --squash
+```
+
+Version drift between a vendored copy and its upstream is exactly the failure logged as X-006 in the prior report. If this repo becomes the real home of the engine, retire the upstream deliberately rather than letting the two diverge quietly.
 
 ## Resuming
 

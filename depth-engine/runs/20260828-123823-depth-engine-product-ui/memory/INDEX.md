@@ -27,3 +27,5 @@
 | L-0021 | 2026-08-28 | correction | **L-A: OVERTURNED** — the Markdown lacks the signals; a read-only renderer fixes 0 of 5, not 5 of 5. Unlock = `CLAUDE_CODE_ENABLE_TELEMETRY=1`, already on the Tier-1 list |
 | L-0022 | 2026-08-28 | action | `research/05-shell-decision.md`; revised 6-step sequence (step 0 = telemetry); **decision NOT converged**, 6/9 open, S6 unresearched |
 | L-0023 | 2026-08-28 | correction | **Self-caught**: register header wrong in all 4 numbers (25/8/5/12 → 27/11/5/11); found by script not review; UI must count rows itself |
+| L-0024 | 2026-08-28 | decision | **Q4 resolved** — consolidated into a product monorepo: `engine/` (subtree, pinned 3b48cb4) + `ui/` + `research/`; no second repo |
+| L-0025 | 2026-08-28 | correction | **"Effort: minutes" was wrong** — the telemetry flag alone collects nothing; no built-in file exporter; needs console or a local collector |
