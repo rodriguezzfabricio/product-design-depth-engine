@@ -126,3 +126,8 @@ L-0022
 Date: 2026-08-28
 Type: action
 `research/05-shell-decision.md` written: S1/S3/S5/S7 answered from the cross-family pass, revised 6-step build sequence (step 0 = turn on telemetry), security requirements folded into step 1 rather than deferred. Decision is **NOT converged** — 6 of 9 sub-questions remain open, including **S6** (who opens the UI and when, given the developer is already watching a terminal) which has had zero research and is a designated primary-grade saturation requirement capable of promoting Option E (TUI). Saturation condition 3 is also unmet: no option other than A has been seriously argued. E8 has NOT been run and must not be run until S6 and S2 have evidence.
+
+L-0023
+Date: 2026-08-28
+Type: correction
+**Self-caught integrity error in this run's own Register.** The hand-written summary header read "25 rows · 8 covered · 5 in-progress · 12 open". A mechanical tally (`grep -c` on the status cells) returned **27 rows · 11 covered · 5 in-progress · 11 open** — wrong in all four numbers. Corrected in `REGISTER.md` and `README.md`. Found by a script, not by review. Two consequences recorded: (1) this is the prior report §6 argument in miniature — mechanical checks are the only reproducible tier, and they should own any number a human would otherwise type; (2) **direct UI requirement** — a rendered coverage bar must count Register rows itself and must never read a summary line, including the one in the file it is rendering. L-B invariant (i) re-run after the fix using the record-parsing awk (not the line-anchored grep that produced a false alarm in the prior run): ledger records = 22, index rows = 22, HOLDS. Invariant (iii) additive-only: `git diff --diff-filter=DR` from root commit to HEAD returns empty, HOLDS.

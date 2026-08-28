@@ -2,7 +2,9 @@
 
 > One row per tracked item (question / task / risk / aspect / sub-question). Status drives convergence (E8). Append rows and update their status; never delete a row (L-B). On resume, the first `open` or `in-progress` row is where you continue.
 
-**Closed list: 25 rows · 8 covered · 5 in-progress · 12 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
+**Closed list: 27 rows · 11 covered · 5 in-progress · 11 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
+
+> **Counted mechanically, not by hand.** A hand-written header on this file initially read "25 rows · 8 · 5 · 12" and was wrong in all four numbers. The error was caught by `grep -c` against the status cells, not by review. That is the Tier-0 argument from the prior report §6 in miniature: the mechanical check is the only reproducible one, and it should own this header. **If the UI renders a coverage bar, it must count the rows itself — never trust a summary line, including this one.**
 
 > Rows S1–S9 are the decision sub-questions E8 judges saturation against (project-type `decision`, confirmed at the E1 gate). The run is **not converged**.
 

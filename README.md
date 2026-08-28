@@ -12,7 +12,7 @@ Product and UI design for the **Depth Engine** — research, decisions, and the 
 
 Operator decisions: shell = **local web app served by the CLI** · first user = **external developers, as a product** · sequencing = **decision run first**.
 
-Coverage: **8 covered · 5 in-progress · 12 open**, out of a closed list of 25 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
+Coverage: **11 covered · 5 in-progress · 11 open**, out of a closed list of 27 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
 
 ## Start here
 
