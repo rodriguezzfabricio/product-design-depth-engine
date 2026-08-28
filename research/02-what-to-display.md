@@ -55,6 +55,26 @@ Five of eight are surface-fixable. That is a real first release.
 
 The narrow claim that survived Codex: **a UI cannot guarantee stopping, liveness, routing, or budget caps.** Display a number ≠ enforce a limit. So do not let the cost meter imply a cap that does not exist — that would be a fail-open gate wearing a fail-closed label, the exact defect X-004 in your prior report.
 
+> ### ⚠ CORRECTION — the table above is half wrong. Read this before building from it.
+>
+> A second cross-family pass (2026-08-28, Ledger `L-0021`) **overturned** the implied claim that a read-only renderer of the Markdown files delivers those five fixes. Codex's objection is concrete and correct: **the Markdown does not contain the required signals.**
+>
+> | Failure | Signal the UI needs | Is it in the Markdown today? |
+> |---|---|---|
+> | F3 staleness | heartbeat / process events | **No** |
+> | F4 actual model | runtime dispatch metadata | **No** |
+> | F7 token cost | telemetry events | **No** |
+> | F5 diffs | git / worktree access — likely *outside* the isolated run directory | **No** |
+> | F8 readability | semantic transformation, not rendering | **No** |
+>
+> What a pure renderer *can* honestly deliver: **REGISTER coverage progress, LEDGER readability, STATE orientation, INDEX navigation.** That is still worth building — but it is four regions of orientation, not five failure fixes.
+>
+> **The unlock is already in your own Tier-1 list.** The prior report's build item #2 is *"Turn on telemetry. `CLAUDE_CODE_ENABLE_TELEMETRY=1`, point the exporter somewhere. Effort: minutes."* That emits `claude_code.api_request` with `model`, `input_tokens`, `output_tokens`, `cost_usd`, and `claude_code.token.usage` with `agent.name` and `effort`. **Those are exactly the F4 and F7 signals the Markdown lacks** — and per §8 of that report, they are already being emitted and merely uncollected.
+>
+> **Revised sequence:** (1) turn on telemetry — minutes; (2) build the renderer over Markdown *plus* the telemetry stream; (3) F3 needs one more thing neither source has — a heartbeat, which means the engine must write a timestamp per active agent. That is a small engine change, and it is the honest price of the staleness fix.
+>
+> Also from that pass: **a CLI-served localhost server that reads source code is an attack surface.** Jupyter ships token auth by default for exactly this reason. Loopback-only binding, a random session token, path confinement, CSP, and origin checks are v1 requirements, not hardening for later.
+
 ## 3. What to display — you already designed it
 
 You said "I don't know what to display." **You do.** The data model is already written, and it is the four memory files the engine creates on every run. They map one-to-one onto four UI regions:

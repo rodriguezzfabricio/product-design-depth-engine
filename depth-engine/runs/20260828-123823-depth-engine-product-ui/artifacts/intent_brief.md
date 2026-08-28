@@ -1,8 +1,19 @@
-# Intent Brief — DRAFT (not yet operator-confirmed)
+# Intent Brief — CONFIRMED
 
 **Run:** `20260828-123823-depth-engine-product-ui`
-**Stage:** E1 · Step 5 drafted · **Step 6 confirm gate NOT cleared**
-**Status:** every `[engine-inferred]` line below is INTERPRETIVE under L-E until the operator answers. This file is a draft; per E1 it may not be treated as `intent_brief.md` proper until an explicit YES.
+**Stage:** E1 · **Step 6 confirm gate CLEARED 2026-08-28**
+**Status:** the operator answered Q1–Q4. Accepted `[engine-inferred]` lines are upgraded to `[engine-inferred — operator-confirmed]` per E1 Step 6; they are **not** reclassified as `[operator-stated]`. E2 may load.
+
+## Operator answers (E1 MOVE 3 → confirm gate)
+
+| # | Question | Answer |
+|---|---|---|
+| **Q1** | Which shell | **Local web app served by the CLI** — `depth-engine ui` opens localhost, reads the run directory directly. No Electron, no hosted infra, no auth. |
+| **Q2** | First user | **External developers, as a product.** Not internal-only. |
+| **Q3** | Sequencing | **Decision run on the shell first**, then a separate build run for the surfaces. |
+| **Q4** | Canonical depth-engine repo | *"Totally diff and new repo and make it private"* — **ambiguous, see `[unknown]` in §4.** Not blocking the shell decision; blocking E2 research that reads engine source. |
+
+**Consequence of Q1 + Q3 read together:** the operator has named a preferred shell *and* asked for the decision to be run properly. These are not in conflict. Q1 becomes the **leading hypothesis the decision run must try to overturn**, not a settled answer. Under L-A, a convenient answer earns more scrutiny, not less — so the E5 sub-questions are framed to attack it.
 
 ---
 
@@ -34,11 +45,14 @@
 - Not modifying engine behavior: no stage, law, or protocol file is edited by this run. `[engine-inferred]`
 - Not a full brand identity — logo, marketing site, naming. `[engine-inferred]`
 - Not competing with Cursor as a code editor; the overlap that matters is supervised background runs. `[engine-inferred]`
-- **Unresolved:** whether shipping a commercial product to external developers is in scope for *this* run or a later one. `[unknown — flag for E2/E3]`
+- **RESOLVED at the confirm gate:** shipping to external developers **is** the target. The product is commercial and external, so nothing may assume the user wrote the engine. `[operator-stated]`
+- **Still unresolved:** which depth-engine repository is canonical. The operator answered *"totally diff and new repo and make it private"*, which does not identify an existing repo. This run's engine recon was performed against the local clone `~/.depth-engine/repo`. `[unknown — flag for E2]`
 
 ## 5. Project-type
 
-**Proposed: `decision` first, then a separate `build` run.** `[engine-inferred]`
+**CONFIRMED: `decision` first, then a separate `build` run.** `[engine-inferred — operator-confirmed]`
+
+E8 therefore applies **decision-saturation** convergence to this run: it converges when the shell decision is answerable and remaining open sub-questions would not change it. E5 produces `decision_subquestions.md`, not an aspect map. A CONVERGED verdict routes to **E11 directly** — E9 and E10 are skipped for a decision-mode run.
 
 E1 Step 5 states: *"When the seed is ambiguous about project-type — for instance, the operator says 'I want to build X' but the real question is whether X is worth building — surface the distinction explicitly. An ambiguous project may be a decision project first and a build project second."*
 
@@ -46,16 +60,14 @@ The seed contains both. "I don't know [whether] to use a web app or app" is a de
 
 ---
 
-## Open questions for the operator (E1 MOVE 3)
+## Residual open item after the gate
 
-Only what research could not resolve. Everything else was self-answered and recorded in the Ledger.
+**Q4 is not resolved.** The operator answered *"totally diff and new repo and make it private"*, which states an intent but does not name a repository. Two readings survive:
 
-| # | Question | Why it is irreducible |
-|---|---|---|
-| **Q1** | **Which shell** — web app, desktop app, both (Cursor's answer), or an extension inside an existing editor? | Depends on your distribution intent, not on research. Structural constraint: engine state is Markdown inside a developer's local git repo, and `START.md`'s isolation rule forbids reading outside the run directory — so a pure web app requires shipping a local agent. That is a scope choice only you can make. |
-| **Q2** | **Who is the first user** — you and your team, or external developers? | Changes nearly every downstream decision: onboarding, defaults, whether the four memory files can be exposed raw. An internal tool can assume the operator wrote the engine. A product cannot. |
-| **Q3** | **Decision run first, or build now?** | Sets E8's convergence mode (§5). If you want the shell resolved with a saturation argument, that is a decision run. If you have already decided the shell, say which and this becomes a build run today. |
-| **Q4** | **Which depth-engine repo is canonical?** | Your seed gives `endegenaassefa/depth-engine`; your own `START.md` records the remote as `rodriguezzfabricio/depth-engine`. I used the local clone at `~/.depth-engine/repo`. Your prior report's **X-009** established the exact gate this triggers: *"Verifying an artifact is not verifying it is the artifact you asked for."* Confirming before more research is spent. |
+1. The canonical depth-engine should be moved to a new private repo that does not exist yet — an action to take, not a fact to record.
+2. The answer was directed at *this* design repo, which was already created private as `rodriguezzfabricio/product-design-depth-engine`.
+
+Under **X-009** from the prior report — *"verifying an artifact is not verifying it is the artifact you asked for"* — this stays `[unknown]` rather than being guessed. It does **not** block the shell decision, which depends on the engine's architecture (already read from the local clone) rather than on which remote hosts it. It **does** block any E2 research that reads engine source as authoritative.
 
 ## Ceiling on this brief
 

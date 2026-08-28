@@ -19,3 +19,10 @@
 | L-0013 | 2026-08-28 | decision | F1–F8 split: observability half (5, ship now) vs enforcement half (3, needs code); guard against fake caps |
 | L-0014 | 2026-08-28 | finding | The 4 memory tiers map 1:1 onto 4 UI regions; REGISTER is the hero — a denominator that closes |
 | L-0015 | 2026-08-28 | action | E1 MOVE 1–2 done; 4 research artifacts; Intent Brief drafted; **Step 6 confirm gate OPEN** |
+| L-0016 | 2026-08-28 | decision | **Confirm gate CLEARED** — local web app via CLI · external devs as product · decision-run first |
+| L-0017 | 2026-08-28 | finding | Q1+Q3: the operator's preferred shell becomes the hypothesis to ATTACK, not to assume |
+| L-0018 | 2026-08-28 | null-result | Q4 still unresolved — answer states intent but names no repo; `[unknown]` per X-009, blocks repo actions |
+| L-0019 | 2026-08-28 | action | E5 map: 9 sub-questions, 5 options; S3 + S6 are the overturn rows; Option E (TUI) added by the engine |
+| L-0020 | 2026-08-28 | correction | **L-A: S1/S7 INCONCLUSIVE** (precedents are category errors; remote dev; localhost needs auth) · **S3 OVERTURNED** (shell forces no business model; one-way door is hosted collaboration only) |
+| L-0021 | 2026-08-28 | correction | **L-A: OVERTURNED** — the Markdown lacks the signals; a read-only renderer fixes 0 of 5, not 5 of 5. Unlock = `CLAUDE_CODE_ENABLE_TELEMETRY=1`, already on the Tier-1 list |
+| L-0022 | 2026-08-28 | action | `research/05-shell-decision.md`; revised 6-step sequence (step 0 = telemetry); **decision NOT converged**, 6/9 open, S6 unresearched |

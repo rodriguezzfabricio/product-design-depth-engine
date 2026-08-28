@@ -8,16 +8,18 @@ Product and UI design for the **Depth Engine** — research, decisions, and the 
 
 ## Status
 
-**E1 — Operator interview. Confirm gate OPEN.**
-Research is done; the Intent Brief is drafted and awaiting the operator's answers to four questions. E2 does not load until then.
+**Confirm gate cleared. Project-type `decision`. In E7 — answering the shell sub-questions. NOT converged.**
 
-Coverage: **7 covered · 4 in-progress · 4 open**, out of a closed list of 15 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
+Operator decisions: shell = **local web app served by the CLI** · first user = **external developers, as a product** · sequencing = **decision run first**.
+
+Coverage: **8 covered · 5 in-progress · 12 open**, out of a closed list of 25 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
 
 ## Start here
 
 | Read | For |
 |---|---|
-| [`research/02-what-to-display.md`](research/02-what-to-display.md) | **The main answer.** What goes in the UI, why, and the two claims that got overturned |
+| [`research/05-shell-decision.md`](research/05-shell-decision.md) | **Newest.** Where the shell decision actually stands, and the 3 claims that did not survive |
+| [`research/02-what-to-display.md`](research/02-what-to-display.md) | **The main answer.** What goes in the UI — includes a ⚠ correction block in §2 |
 | [`research/01-tooling-audit.md`](research/01-tooling-audit.md) | Which skills to install, which you already have, and the one command that doesn't work |
 | [`research/03-market-and-business.md`](research/03-market-and-business.md) | How developer tools actually grew, and which numbers are unverified |
 | [`research/04-design-canon.md`](research/04-design-canon.md) | Nine verified resources, and the four to read first |

@@ -89,3 +89,40 @@ L-0015
 Date: 2026-08-28
 Type: action
 E1 MOVE 1–2 complete; four research artifacts written to `research/` (01 tooling audit, 02 what-to-display, 03 market-and-business, 04 design-canon). Intent Brief DRAFTED to `artifacts/intent_brief.md` with provenance tags on every line. Proposed project-type: `decision` first (shell), then a separate `build` run (surfaces) — the seed contains both and E8 cannot select a convergence mode for a merged project. MOVE 3: four irreducible questions put to the operator (Q1 shell, Q2 first user, Q3 decision-vs-build sequencing, Q4 canonical repo identity — seed says `endegenaassefa/depth-engine`, operator's own START.md says `rodriguezzfabricio/depth-engine`; X-009 gate applies). **E1 Step 6 confirm gate is OPEN. E2 must not load until the operator answers.**
+
+L-0016
+Date: 2026-08-28
+Type: decision
+**E1 Step 6 confirm gate CLEARED.** Operator answers: Q1 shell = **local web app served by the CLI** (`depth-engine ui` → localhost, reads run dir directly, no Electron/infra/auth). Q2 first user = **external developers, as a product** (not internal-only). Q3 sequencing = **decision run on the shell first**, then a separate build run. Q4 canonical repo = *"Totally diff and new repo and make it private"* — does not name a repo; unresolved, see L-0018. Project-type is now CONFIRMED `decision`, so E8 applies decision-saturation and a CONVERGED verdict routes to E11 directly, skipping E9 and E10. Accepted engine-inferred lines upgraded to `[engine-inferred — operator-confirmed]`, NOT to `[operator-stated]`.
+
+L-0017
+Date: 2026-08-28
+Type: finding
+Q1 and Q3 read together are not contradictory but they change the decision run's job. The operator named a preferred shell AND asked for the decision to be run properly. Therefore Option A (CLI-served local web app) is treated as the **leading hypothesis the run must attempt to overturn**, not as a settled answer. This is L-A applied to the operator's own preference: a convenient answer earns more scrutiny, not less. The E5 sub-questions are deliberately phrased so a `no` is reachable.
+
+L-0018
+Date: 2026-08-28
+Type: null-result
+Q4 remains UNRESOLVED after the confirm gate. The operator's answer states an intent ("totally diff and new repo and make it private") but names no repository. Two readings survive: (1) the canonical depth-engine should move to a new private repo that does not yet exist — an action, not a fact; (2) the answer was aimed at this design repo, already created private. Under X-009 from the prior report ("verifying an artifact is not verifying it is the artifact you asked for"), recorded as `[unknown]` rather than guessed. Does NOT block the shell decision, which turns on architecture already read from the local clone. DOES block any E2 research treating engine source as authoritative, and blocks any action that would create or move repositories.
+
+L-0019
+Date: 2026-08-28
+Type: action
+E5 decision sub-question map written to `artifacts/decision_subquestions.md`: 9 sub-questions (S1–S9) against 5 options (A–E). S3 (does commercial + external break local-only, given no auth/gating/telemetry) and S6 (who opens the UI and when, given the engine is walked by an agent in a terminal the developer is already watching) are designated the two rows most capable of overturning the hypothesis and must be answered at primary grade for saturation. **Option E (a richer terminal UI) was added by the engine, not offered at the gate** — the operator's four options shared the assumption that the answer is a GUI, and E5 exists to catch aspects nobody framed. Saturation criterion recorded with 5 conditions including a mandatory cross-family overturn on the final recommendation.
+
+L-0020
+Date: 2026-08-28
+Type: correction
+**L-A cross-family verdict on the shell hypothesis: 1 INCONCLUSIVE, 2 OVERTURNED. Nothing survived clean.** (a) S1/S7 "localhost has precedent at scale + local-only is a feature" → **INCONCLUSIVE**. Codex: "The precedents are category errors. Storybook, Vite, and `next dev` are free development infrastructure, not standalone commercial workflow products. Prisma pairs local Studio with a hosted collaborative Console; local-only was not sufficient for team use." Two further objections: remote development (SSH, containers, Codespaces, devboxes) frequently puts the run directory on a different machine from the browser, and VS Code needs explicit port forwarding to reach localhost services; and localhost is NOT secure — Jupyter ships token auth by default, so loopback-only binding, random session token, path confinement, CSP, and origin checks are v1 requirements for a server that reads source code. Only genuine commercial-local precedent came from Codex, not from this run: **TablePlus** (perpetual license, local DB client). (b) S3 "commercial+external forces open-core/license-key/hosted tier, decide now" → **OVERTURNED**. The shell forces no business model and does not preclude telemetry (Storybook and Next.js collect opt-in anonymous telemetry while running locally); entitlement can sit at package download, CLI launch, update delivery, or premium-command execution. Narrower surviving guidance: decide distribution and entitlement boundaries now, but do not prematurely design account auth. The genuine one-way door is **hosted collaboration**, not telemetry and not licensing.
+Decided at: ~150k context — provisional until reproduced cold (L-C).
+
+L-0021
+Date: 2026-08-28
+Type: correction
+**L-A verdict: OVERTURNED — the most consequential correction of this run.** Claim: "a read-only renderer of the 4 Markdown tiers, with no write path and no backend, already resolves five of eight failures (F3/F4/F5/F7-tracking/F8)." Codex established the Markdown does not carry the required signals: staleness needs heartbeat/process events; "actual model" needs runtime dispatch metadata; token cost needs telemetry events; diffs need git/worktree access likely OUTSIDE the isolated run directory; humanized output needs semantic transformation, not rendering. Also: "A CLI-served browser app already has a backend: the CLI's HTTP/file server" — the no-backend framing was false. And: "Polling, file watching, parsing partial writes, clock-based liveness, and derived status ARE state management." What survives: a renderer honestly delivers REGISTER coverage progress, LEDGER readability, STATE orientation, INDEX navigation — four regions of orientation, not five failure fixes. This **directly invalidates L-0013's implied scope**; a correction block was written into `research/02-what-to-display.md` §2 rather than the claim being silently edited. UNLOCK, already on the operator's own Tier-1 list from the prior report (item #2, "effort: minutes"): `CLAUDE_CODE_ENABLE_TELEMETRY=1` emits `claude_code.api_request` with `model` and `cost_usd`, and `claude_code.token.usage` with `agent.name` — exactly the missing F4 and F7 signals. Only F3 then needs new engine work: a per-agent heartbeat timestamp. Revised 6-step build sequence recorded in `research/05-shell-decision.md`.
+Decided at: ~150k context — provisional until reproduced cold (L-C).
+
+L-0022
+Date: 2026-08-28
+Type: action
+`research/05-shell-decision.md` written: S1/S3/S5/S7 answered from the cross-family pass, revised 6-step build sequence (step 0 = turn on telemetry), security requirements folded into step 1 rather than deferred. Decision is **NOT converged** — 6 of 9 sub-questions remain open, including **S6** (who opens the UI and when, given the developer is already watching a terminal) which has had zero research and is a designated primary-grade saturation requirement capable of promoting Option E (TUI). Saturation condition 3 is also unmet: no option other than A has been seriously argued. E8 has NOT been run and must not be run until S6 and S2 have evidence.

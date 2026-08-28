@@ -3,32 +3,35 @@
 > The single mutable "where am I" file. Overwrite in place at each compaction/resume (L-B). Keep it lean — the full record lives in the Ledger; this file POINTS at detail, it does not duplicate it.
 
 ### Current stage & task
-**E1 — Operator interview.** MOVE 1 (candidate questions) and MOVE 2 (self-answer by research) complete. MOVE 3 delivered: four irreducible questions put to the operator. **Step 6 confirm gate is OPEN and blocking.** E2 must not load until the operator confirms or corrects `artifacts/intent_brief.md`.
+**E1 complete (confirm gate cleared). E5 complete. In E7 — answering the decision sub-questions.**
+Four of nine sub-questions have evidence; the decision is **NOT converged**. E8 has not been run and must not run until S2 and S6 have evidence.
 
 ### Project-type
-**PROPOSED, not confirmed:** `decision` first (which shell), then a separate `build` run (which surfaces). The seed contains both and E8 cannot select a convergence mode for a merged project. Awaiting operator answer to Q3.
+**`decision`** — CONFIRMED at the E1 confirm gate. E8 applies **decision-saturation**. A CONVERGED verdict routes to **E11 directly**; E9 and E10 are skipped.
 
 ### Key conclusions & decisions in force
-- The 4 memory tiers map 1:1 onto 4 UI regions; `REGISTER.md` is the hero object — the only honest progress bar in the category because its denominator closes (L-0014).
-- F1–F8 split into an observability half (F3/F4/F5/F7-tracking/F8 — a UI fixes these) and an enforcement half (F1/F2/F7-cap — it cannot). Ship the observability UI first (L-0013).
-- Two of this run's own central claims were OVERTURNED by cross-family check (L-0011, L-0012). Both corrections moved the design toward the operator's original instinct, not away from it.
+- **Shell hypothesis is NOT confirmed.** Operator prefers Option A (CLI-served local web app). Cross-family pass returned 1 inconclusive + 2 overturned; nothing survived clean (L-0020, L-0021).
+- **A read-only Markdown renderer fixes none of the five observability failures** — the Markdown lacks heartbeat, dispatch metadata, telemetry, and git access (L-0021). It does deliver orientation: coverage bar, readable ledger, state header, navigation.
+- **The unlock is `CLAUDE_CODE_ENABLE_TELEMETRY=1`** — already item #2 on the prior report's Tier-1 list, "effort: minutes". Supplies `model` per request (F4) and `cost_usd`/tokens per `agent.name` (F7). Only F3 then needs new engine work: a per-agent heartbeat timestamp.
+- **The only genuine one-way door is hosted collaboration.** Telemetry and licensing can be added later cheaply; account auth should not be built pre-emptively (L-0020).
+- **Localhost security is a v1 requirement**, not later hardening: loopback-only binding, random session token, path confinement, CSP, origin checks. Jupyter's default token auth is the precedent.
+- `REGISTER.md` as the hero UI object survives — still **unchallenged**, which under L-A means it is owed scrutiny, not trust (L-0014).
 - Rank tools by reading them, never by registry install counts (L-0006).
-- No AI-company growth number is verified. Six are quarantined as UNVERIFIED (L-0010).
 
 ### Open threads & next actions
-1. **BLOCKING — operator answers Q1–Q4** (`artifacts/intent_brief.md` §Open questions). Nothing downstream is valid until then.
-2. Open the two Codex-cited sources not yet read: `docs.cursor.com/background-agent` and LangSmith tracing/cost docs. Both are load-bearing for L-0011/L-0012 and were accepted on Codex's citation alone.
-3. Competitive teardown — actually look at Cursor Background Agents, LangSmith, GitHub Actions run views. Named in `research/03` §6 as the obvious cheap next pass.
-4. Re-run the market pass with Scrapling `StealthyFetcher` (v0.4.15, in the run venv) to upgrade or kill the six quarantined figures (L-0010).
-5. L-C cold re-verify of L-0011/L-0012/L-0013 — all decided at ~110k context, provisional until reproduced in a fresh window.
-6. Candidate engine change to carry forward: a mandatory "inventory existing capability" step before any tooling recommendation (L-0007, 4th recurrence).
+1. **S6 — who opens the UI, and when?** Zero research. The developer is already watching a terminal while the agent walks the engine. This is the sharpest live objection to Option A and could promote Option E (a TUI). Designated primary-grade for saturation.
+2. **S2 — does the isolation rule in `START.md` forbid a viewer process reading the run directory?** Unanswered; potentially makes Option A illegal as specified.
+3. **Argue an option other than A seriously.** Saturation condition 3 is unmet. As written, this run would converge on the operator's preference without a real alternative — the exact shape of a flattering result under L-A.
+4. Open Codex's citations — Prisma Studio/Console, VS Code Remote SSH, Jupyter security, Storybook/Next.js telemetry, TablePlus. Accepted as argument, never verified. Second recurrence of this defect.
+5. Re-run the market pass with Scrapling `StealthyFetcher` to upgrade or kill the six quarantined figures (L-0010).
+6. L-C cold re-verify: L-0011, L-0012, L-0013, L-0020, L-0021 were all decided at 110k–150k context.
+7. Carry-forward engine change: a mandatory "inventory existing capability" step before any tooling recommendation (L-0007, 4th recurrence).
 
 ### Resume mode
-**WAIT** — stopped at a real gate (E1 Step 6 confirm gate). Do not advance to E2 on resume; re-read this file and the Intent Brief, then check whether the operator has answered Q1–Q4.
+**CONTINUE** — next unambiguous action is S6: research whether a browser surface helps or fragments attention for a developer already supervising an agent in a terminal, then S2. Do not run E8 before both have evidence.
 
 ### Ledger status
-Highest ID in Ledger: **L-0015** · Index rows: **15** · invariant (i) holds.
+Highest ID in Ledger: **L-0022** · Index rows: **22** · invariant (i) holds.
 
 ### Blocked items
-- E2 (domain expert) — blocked on the E1 confirm gate.
-- Q4 repo-identity ambiguity — seed says `endegenaassefa/depth-engine`; operator's own `START.md` records `rodriguezzfabricio/depth-engine`. Research proceeded against the local clone `~/.depth-engine/repo`. Prior report's X-009 gate applies: verifying an artifact is not verifying it is the requested artifact.
+- **Q4 repo identity** — operator answered *"totally diff and new repo and make it private"*, which names no repository. `[unknown]`. Blocks any E2 research treating engine source as authoritative, and blocks any action that would create or move repositories. Does not block the shell decision.
