@@ -22,6 +22,7 @@ Coverage: **19 covered · 10 in-progress · 17 open**, out of a closed list of 4
 
 | Read | For |
 |---|---|
+| [`TEAM-BRIEF.md`](TEAM-BRIEF.md) | **Start here if you are new.** The whole situation from zero, in plain English, for team discussion |
 | [`research/09-the-gold.md`](research/09-the-gold.md) | **Newest.** v2 mapped against the closest competitor, and the one item worth building a company around |
 | [`research/08-does-anyone-need-this.md`](research/08-does-anyone-need-this.md) | **Newest.** Whether the category sells at all, what killed the last generation of rigor tools, and who the payer probably is. **No cross-family check ran** |
 | [`research/07-the-seam.md`](research/07-the-seam.md) | **Newest.** The task-contract seam, the CI lint that enforces it, cross-platform notifications, and the buyer gap |
