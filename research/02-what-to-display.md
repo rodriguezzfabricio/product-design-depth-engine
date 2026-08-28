@@ -77,6 +77,10 @@ The narrow claim that survived Codex: **a UI cannot guarantee stopping, liveness
 
 ## 3. What to display — you already designed it
 
+> ### ⛔ SUPERSEDED by [`06-ip-boundary-and-agents.md`](06-ip-boundary-and-agents.md) §5
+>
+> This section maps engine internals one-to-one onto UI regions — stage rail, ledger feed, law badges. **That leaks the pipeline by construction**, and the operator has since established that the method is the product's IP. The file→region insight survives as an *internal* data model; what the customer sees must be a translated layer (plain phase names, "your questions", "what we found"). Read §5 of `06` before building anything from this section.
+
 You said "I don't know what to display." **You do.** The data model is already written, and it is the four memory files the engine creates on every run. They map one-to-one onto four UI regions:
 
 | Engine file | What it is | UI region | Why it earns the space |

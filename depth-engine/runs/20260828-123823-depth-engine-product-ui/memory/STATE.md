@@ -10,6 +10,9 @@ Four of nine sub-questions have evidence; the decision is **NOT converged**. E8 
 **`decision`** — CONFIRMED at the E1 confirm gate. E8 applies **decision-saturation**. A CONVERGED verdict routes to **E11 directly**; E9 and E10 are skipped.
 
 ### Key conclusions & decisions in force
+- **The IP requirement is an architecture problem, not a UI problem.** `depth-engine init` copies every method file to the customer's disk, so secrecy is impossible under today's architecture — but not impossible in principle (L-0029). The operator's premise that Cursor/Claude Code prompts are unseen is false: a 143,196-star repo publishes them (L-0028).
+- **BYO-agent and method protection are compatible** via stage-scoped task contracts: the orchestrator keeps sequencing, gates and laws; connected agents get one task at a time and never see the pipeline (L-0030).
+- **Display rule replaced:** show the customer's work, never the engine's machinery. `research/02` §3 is superseded (L-0032). Evidence must still be shown, or the "it survived attack" proposition is unprovable.
 - **Shell hypothesis is NOT confirmed.** Operator prefers Option A (CLI-served local web app). Cross-family pass returned 1 inconclusive + 2 overturned; nothing survived clean (L-0020, L-0021).
 - **A read-only Markdown renderer fixes none of the five observability failures** — the Markdown lacks heartbeat, dispatch metadata, telemetry, and git access (L-0021). It does deliver orientation: coverage bar, readable ledger, state header, navigation.
 - **The unlock is `CLAUDE_CODE_ENABLE_TELEMETRY=1`** — already item #2 on the prior report's Tier-1 list, "effort: minutes". Supplies `model` per request (F4) and `cost_usd`/tokens per `agent.name` (F7). Only F3 then needs new engine work: a per-agent heartbeat timestamp.
@@ -31,7 +34,7 @@ Four of nine sub-questions have evidence; the decision is **NOT converged**. E8 
 **CONTINUE** — S6 is answered (L-0026). Next unambiguous action is **S11**: decide the notification channel and where the primitive lives in the engine — it blocks any shell build and is F3's real fix. Then S2 (isolation rule vs a viewer process) and S10 (argue an option other than A). Do not run E8 before S2, S10 and S11 have evidence.
 
 ### Ledger status
-Highest ID in Ledger: **L-0027** · Index rows: **27** · invariant (i) holds.
+Highest ID in Ledger: **L-0032** · Index rows: **32** · invariant (i) holds.
 
 ### Blocked items
 - **Q4 repo identity** — operator answered *"totally diff and new repo and make it private"*, which names no repository. `[unknown]`. Blocks any E2 research treating engine source as authoritative, and blocks any action that would create or move repositories. Does not block the shell decision.

@@ -31,3 +31,8 @@
 | L-0025 | 2026-08-28 | correction | **"Effort: minutes" was wrong** — the telemetry flag alone collects nothing; no built-in file exporter; needs console or a local collector |
 | L-0026 | 2026-08-28 | finding | **S6 answered** — devs don't watch, they leave and get pulled back; attention objection dissolves; TUI not promoted |
 | L-0027 | 2026-08-28 | correction | **F3 misdiagnosed** — needs a notification, not a heartbeat display; engine has no notification primitive (S11 opened) |
+| L-0028 | 2026-08-28 | finding | **Premise false** — Cursor/Claude Code prompts ARE public (143,196-star repo, verified). Hermes real: 237,588 stars, MIT |
+| L-0029 | 2026-08-28 | correction | **L-A INCONCLUSIVE** — secrecy impossible under *today's architecture* (`init` ships the method), not forever. Stripe Radar + RenTec are hidden-method businesses |
+| L-0030 | 2026-08-28 | correction | **L-A OVERTURNED** — BYO-agent and IP protection are compatible via **stage-scoped task contracts**; GitLab BYOM is the precedent |
+| L-0031 | 2026-08-28 | decision | BYO-agent validated; ship it as a `Author · Challenger · ✓cross-family` guarantee strip, not a settings page. Sourcegraph/Cody is the caution |
+| L-0032 | 2026-08-28 | decision | **Display model replaced** — show the customer's work, never the machinery. `02` §3 superseded. Evidence must still be shown or there is no product |
