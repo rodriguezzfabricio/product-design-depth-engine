@@ -23,15 +23,18 @@ Coverage: **12 covered · 5 in-progress · 11 open**, out of a closed list of 28
 | [`research/01-tooling-audit.md`](research/01-tooling-audit.md) | Which skills to install, which you already have, and the one command that doesn't work |
 | [`research/03-market-and-business.md`](research/03-market-and-business.md) | How developer tools actually grew, and which numbers are unverified |
 | [`research/04-design-canon.md`](research/04-design-canon.md) | Nine verified resources, and the four to read first |
-| [`artifacts/intent_brief.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/artifacts/intent_brief.md) | The four open questions blocking the run |
+| [`ui/README.md`](ui/README.md) | What is settled about the surface, and why nothing is built yet |
+| [`artifacts/intent_brief.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/artifacts/intent_brief.md) | Confirmed intent; Q1–Q4 answered |
 
-## The three findings that matter
+## The four findings that matter
 
 1. **You already designed the UI's data model.** The engine writes four memory files on every run. They map one-to-one onto four UI regions, and `REGISTER.md` — a closed list with per-row status — is a progress bar that can honestly reach 100%. Every competitor shows a spinner, because a spinner is what you display when you cannot name the denominator.
 
-2. **Your eight failures split in half, and the split is the release plan.** Five (F3, F4, F5, F7-tracking, F8) are fixable with pixels. Three (F1, F2, F7-cap) need code that runs. Ship the first five.
+2. **The UI reads two sources, not one.** The Markdown cannot answer staleness, model routing, or cost — those signals are not in it. The second source is OpenTelemetry. This was the run's most expensive correction (`L-0021`), and it replaced an earlier claim here that five of the eight failures were fixable with pixels alone. They are not.
 
-3. **The engine argued against the operator twice and lost both times.** Under Law L-A, this run's two central claims were sent to Codex — a different model family — with instructions to overturn them. Both were overturned, with concrete counter-evidence. The corrections are recorded in [`research/02`](research/02-what-to-display.md) §1 and in the Ledger as `L-0011` and `L-0012`, not quietly edited out.
+3. **Developers do not watch long runs — they leave.** So the product is a four-beat loop: start, leave, get pulled back at a gate or a death, land somewhere that answers *what needs me*. Which means **F3 needs a notification, not a heartbeat display** — a dashboard row only helps someone who is already looking. The engine has no notification primitive today (`L-0026`, `L-0027`).
+
+4. **The engine argued against the operator three times and lost every time.** Under Law L-A, this run's central claims were sent to Codex — a different model family — with instructions to overturn them. Five verdicts so far: four overturned, one inconclusive, none clean. Every correction moved *toward* the operator's original instinct. They are recorded in [`research/02`](research/02-what-to-display.md) §1, [`research/05`](research/05-shell-decision.md), and the Ledger — not quietly edited out.
 
 ## Layout
 
@@ -67,10 +70,10 @@ Version drift between a vendored copy and its upstream is exactly the failure lo
 /depth-engine-start resume 20260828-123823-depth-engine-product-ui
 ```
 
-Reads `STATE.md`, runs the L-B integrity checks, finds the first open Register row, continues there. Resume mode is **WAIT** — it stops at the E1 confirm gate rather than advancing on its own.
+Reads `STATE.md`, runs the L-B integrity checks, finds the first open Register row, continues there. Resume mode is **CONTINUE**, pointed at **S11** — decide the notification channel and where the primitive lives in the engine. It blocks any shell build.
 
 ## Honest ceiling
 
 A clean walk proves the process ran. It does not prove the output is right.
 
-Specifically, as of this run: no user research exists — no developer other than the operator has been asked anything. Two Codex-cited sources were accepted on citation alone and never opened. Six market figures are quarantined as unverified. Three decisions were made at ~110k context and are provisional until reproduced cold. All of this is tracked as open rows in the Register rather than left implicit.
+Specifically, as of this run: **the shell decision has not converged** — 11 Register rows are open, including S2 (does the isolation rule even permit a viewer process) and S10 (no option other than the operator's preference has been seriously argued, which is the shape L-A says to distrust). No user research exists; no developer other than the operator has been asked anything. Codex's cited sources were accepted on citation alone and never opened — twice. Six market figures are quarantined as unverified. Five decisions were made at 110k–180k context and are provisional until reproduced cold. All of it is tracked as open rows rather than left implicit.
