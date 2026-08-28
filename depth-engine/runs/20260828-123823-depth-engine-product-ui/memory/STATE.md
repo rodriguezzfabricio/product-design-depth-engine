@@ -28,10 +28,10 @@ Four of nine sub-questions have evidence; the decision is **NOT converged**. E8 
 7. Carry-forward engine change: a mandatory "inventory existing capability" step before any tooling recommendation (L-0007, 4th recurrence).
 
 ### Resume mode
-**CONTINUE** — next unambiguous action is S6: research whether a browser surface helps or fragments attention for a developer already supervising an agent in a terminal, then S2. Do not run E8 before both have evidence.
+**CONTINUE** — S6 is answered (L-0026). Next unambiguous action is **S11**: decide the notification channel and where the primitive lives in the engine — it blocks any shell build and is F3's real fix. Then S2 (isolation rule vs a viewer process) and S10 (argue an option other than A). Do not run E8 before S2, S10 and S11 have evidence.
 
 ### Ledger status
-Highest ID in Ledger: **L-0025** · Index rows: **25** · invariant (i) holds.
+Highest ID in Ledger: **L-0027** · Index rows: **27** · invariant (i) holds.
 
 ### Blocked items
 - **Q4 repo identity** — operator answered *"totally diff and new repo and make it private"*, which names no repository. `[unknown]`. Blocks any E2 research treating engine source as authoritative, and blocks any action that would create or move repositories. Does not block the shell decision.

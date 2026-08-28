@@ -2,7 +2,7 @@
 
 > One row per tracked item (question / task / risk / aspect / sub-question). Status drives convergence (E8). Append rows and update their status; never delete a row (L-B). On resume, the first `open` or `in-progress` row is where you continue.
 
-**Closed list: 27 rows · 11 covered · 5 in-progress · 11 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
+**Closed list: 28 rows · 12 covered · 5 in-progress · 11 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
 
 > **Counted mechanically, not by hand.** A hand-written header on this file initially read "25 rows · 8 · 5 · 12" and was wrong in all four numbers. The error was caught by `grep -c` against the status cells, not by review. That is the Tier-0 argument from the prior report §6 in miniature: the mechanical check is the only reproducible one, and it should own this header. **If the UI renders a coverage bar, it must count the rows itself — never trust a summary line, including this one.**
 
@@ -31,9 +31,10 @@
 | S3 · Does commercial + external break local-only? | sub-question | **covered** | L-0020 | No. Shell forces no business model; entitlement has 4 non-auth insertion points |
 | S4 · Team review + work-from-any-computer | sub-question | **open** | — | Operator stated the goal; Prisma needed a hosted Console for team use |
 | S5 · Can a read-only renderer fix the five failures? | sub-question | **covered** | L-0021 | **No.** Markdown lacks every required signal. Telemetry flag + heartbeat are the fix |
-| S6 · Who opens the UI, and when? | sub-question | **open** | — | **Sharpest live objection.** Zero research. Could promote Option E (TUI). Primary-grade required |
+| S6 · Who opens the UI, and when? | sub-question | **covered** | L-0026 | Premise was wrong — devs leave and get pulled back. Attention objection dissolves; TUI not promoted |
 | S7 · Is local-only a real differentiator for this buyer? | sub-question | **open** | L-0020 | "Credible feature", but not established as decisive. Remote dev undercuts the premise |
 | S8 · Migration path if v1 later needs hosting | sub-question | **covered** | L-0020 | One-way door is **hosted collaboration** only. Telemetry and licensing are cheap to retrofit |
 | S9 · Build cost per option | sub-question | **open** | — | Tiebreaker if S1–S8 do not separate the options |
 | S10 · Argue an option other than A seriously | sub-question | **open** | — | Saturation condition 3. Unmet — as written this run would converge on the operator's preference unopposed |
 | R5 · Codex citations accepted but never opened | risk | **open** | L-0020, L-0021 | Prisma, VS Code Remote SSH, Jupyter security, Storybook/Next telemetry, TablePlus. 2nd recurrence |
+| S11 · Notification channel + where the primitive lives | sub-question | **open** | L-0027 | **New, from S6.** Blocks any shell build. F3's real fix. Not in Markdown or telemetry |

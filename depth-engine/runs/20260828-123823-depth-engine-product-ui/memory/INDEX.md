@@ -29,3 +29,5 @@
 | L-0023 | 2026-08-28 | correction | **Self-caught**: register header wrong in all 4 numbers (25/8/5/12 → 27/11/5/11); found by script not review; UI must count rows itself |
 | L-0024 | 2026-08-28 | decision | **Q4 resolved** — consolidated into a product monorepo: `engine/` (subtree, pinned 3b48cb4) + `ui/` + `research/`; no second repo |
 | L-0025 | 2026-08-28 | correction | **"Effort: minutes" was wrong** — the telemetry flag alone collects nothing; no built-in file exporter; needs console or a local collector |
+| L-0026 | 2026-08-28 | finding | **S6 answered** — devs don't watch, they leave and get pulled back; attention objection dissolves; TUI not promoted |
+| L-0027 | 2026-08-28 | correction | **F3 misdiagnosed** — needs a notification, not a heartbeat display; engine has no notification primitive (S11 opened) |

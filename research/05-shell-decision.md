@@ -81,11 +81,53 @@ That leaves **F3 (staleness)** as the only one needing new engine work: a timest
 
 Security is not a step — loopback binding, session token, path confinement, CSP, and origin checks belong in step 1.
 
+## S6 — "who opens the UI, and when?" → **the question was framed wrong**
+
+I framed S6 as *terminal vs. browser while watching a run*. Research killed the premise: **for long-running agent work, the developer does not watch. They leave.**
+
+What the products actually do:
+
+| Product | What happens while it runs | How the developer comes back |
+|---|---|---|
+| **Cursor Background Agents** | Runs remotely, writes to a branch | Opens a **PR with a summary**, then notifies by **email + desktop notification + Slack** |
+| **GitHub Actions** | Runs on CI | `gh run watch` streams in the terminal until settled; web UI for review |
+| **Agent-watch tooling generally** | Returns a watch ID immediately, streams to a bounded widget | Reports final status back when the run settles |
+
+And the documented caution, which matters for your F3 instinct: *monitors should remain selective, since every output line interrupts.* A firehose is not observability.
+
+### What this does to the design
+
+**The primary job is not "watch a run." It is a four-beat loop:**
+
+1. **Start** — one action.
+2. **Leave confidently** — know it is running and know it will fetch you.
+3. **Get pulled back at the right moment** — a gate, a death, or a terminal.
+4. **Land somewhere that answers "what happened, what changed, what needs me"** — and decide in under a minute.
+
+**This partly rescues Option A.** The "a browser tab fragments attention" objection weakens badly, because you are not meant to be staring at it. You are pulled to it. A surface you visit on notification is not a competing window; it is a destination.
+
+**But it surfaces a requirement no source in this run had named: the engine has no notification primitive.** Not in the Markdown, not in the telemetry. That is a gap in the engine, not in the UI.
+
+### F3 was misdiagnosed — by me, and arguably in the original failure log
+
+F3 reads: *"subagents kept dying and the engine never noticed. The operator sat waiting, then checked by hand."*
+
+I mapped that to a heartbeat indicator. **A heartbeat display only helps someone who is looking at it** — and the whole point is that he had left. F3's real fix is a **notification**, not a dashboard row.
+
+That is a sharper and cheaper fix than the UI work it was queued behind. It also means the engine's **hard gates are the natural notification triggers** — the E1 confirm gate, the E2/E5 sign-offs, the E11 review, plus agent death and terminal. Those are precisely the moments the operator must be fetched.
+
+### Revised S6 verdict
+
+- The shell matters **less** than the notification channel. Both a browser and a TUI can be notified into.
+- **Option E (TUI) is not promoted** on attention grounds — the attention objection largely dissolves.
+- New blocking work, ahead of any shell build: **decide the notification channel** (OS notification, terminal bell, email, Slack) and **add the primitive to the engine.**
+- Cursor's review surface is a **PR**, not a dashboard. Worth taking seriously: the Depth Engine's terminals — scaffold, decision, refusal — may want to land as a document or PR the developer already knows how to review, with the dashboard reserved for a run in flight.
+
 ## Still open
 
-**S2** isolation rule vs. a viewer process · **S4** team review and work-from-anywhere · **S6** who opens the UI and when, given the developer is already watching a terminal — *still the sharpest unanswered objection, and the one that could promote Option E (a TUI)* · **S9** cost per option.
+**S2** isolation rule vs. a viewer process · **S4** team review and work-from-anywhere · **S7** is local-only decisive for this buyer · **S9** cost per option · **S10** argue an option other than A seriously.
 
-S6 has had no research at all. It is designated a primary-grade saturation requirement, and it is unanswered.
+**S11 (new, from S6):** what is the notification channel, and where does the primitive live in the engine?
 
 ## Ceiling
 
