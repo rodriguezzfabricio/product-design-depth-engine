@@ -12,13 +12,14 @@ Product and UI design for the **Depth Engine** — research, decisions, and the 
 
 Operator decisions: shell = **local web app served by the CLI** · first user = **external developers, as a product** · sequencing = **decision run first**.
 
-Coverage: **13 covered · 6 in-progress · 14 open**, out of a closed list of 33 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
+Coverage: **16 covered · 6 in-progress · 14 open**, out of a closed list of 36 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
 
 ## Start here
 
 | Read | For |
 |---|---|
-| [`research/06-ip-boundary-and-agents.md`](research/06-ip-boundary-and-agents.md) | **Newest and most important.** The IP boundary, connect-your-own-agent, and what the UI can honestly show. Supersedes `02` §3 |
+| [`research/07-the-seam.md`](research/07-the-seam.md) | **Newest.** The task-contract seam, the CI lint that enforces it, cross-platform notifications, and the buyer gap |
+| [`research/06-ip-boundary-and-agents.md`](research/06-ip-boundary-and-agents.md) | The IP boundary, connect-your-own-agent, and what the UI can honestly show. Supersedes `02` §3 |
 | [`research/05-shell-decision.md`](research/05-shell-decision.md) | Where the shell decision stands, and the claims that did not survive |
 | [`research/02-what-to-display.md`](research/02-what-to-display.md) | **The main answer.** What goes in the UI — includes a ⚠ correction block in §2 |
 | [`research/01-tooling-audit.md`](research/01-tooling-audit.md) | Which skills to install, which you already have, and the one command that doesn't work |

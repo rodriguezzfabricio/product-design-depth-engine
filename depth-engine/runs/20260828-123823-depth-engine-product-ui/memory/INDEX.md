@@ -36,3 +36,7 @@
 | L-0030 | 2026-08-28 | correction | **L-A OVERTURNED** — BYO-agent and IP protection are compatible via **stage-scoped task contracts**; GitLab BYOM is the precedent |
 | L-0031 | 2026-08-28 | decision | BYO-agent validated; ship it as a `Author · Challenger · ✓cross-family` guarantee strip, not a settings page. Sourcegraph/Cody is the caution |
 | L-0032 | 2026-08-28 | decision | **Display model replaced** — show the customer's work, never the machinery. `02` §3 superseded. Evidence must still be shown or there is no product |
+| L-0033 | 2026-08-28 | decision | Operator: design the seam now · real venture · **buyer unknown** · notifications all-OS. Shell unblocked from S12 |
+| L-0034 | 2026-08-28 | finding | **Biggest risk is now non-technical** — venture with no known buyer; zero non-operator interviews. Not reducible by engine research |
+| L-0035 | 2026-08-28 | decision | Seam spec: self-contained task contracts, no stage/law identifiers; enforced as a **CI lint**, not a promise |
+| L-0036 | 2026-08-28 | finding | `node-notifier` 5.5M/wk but **stale 2 years**; write ~30 lines native instead to keep the CLI dependency-free. Fire on 4 events only |

@@ -2,7 +2,7 @@
 
 > One row per tracked item (question / task / risk / aspect / sub-question). Status drives convergence (E8). Append rows and update their status; never delete a row (L-B). On resume, the first `open` or `in-progress` row is where you continue.
 
-**Closed list: 33 rows · 13 covered · 6 in-progress · 14 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
+**Closed list: 36 rows · 16 covered · 6 in-progress · 14 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
 
 > **Counted mechanically, not by hand.** A hand-written header on this file initially read "25 rows · 8 · 5 · 12" and was wrong in all four numbers. The error was caught by `grep -c` against the status cells, not by review. That is the Tier-0 argument from the prior report §6 in miniature: the mechanical check is the only reproducible one, and it should own this header. **If the UI renders a coverage bar, it must count the rows itself — never trust a summary line, including this one.**
 
@@ -38,8 +38,11 @@
 | S10 · Argue an option other than A seriously | sub-question | **open** | — | Saturation condition 3. Unmet — as written this run would converge on the operator's preference unopposed |
 | R5 · Codex citations accepted but never opened | risk | **open** | L-0020, L-0021 | Prisma, VS Code Remote SSH, Jupyter security, Storybook/Next telemetry, TablePlus. 2nd recurrence |
 | S11 · Notification channel + where the primitive lives | sub-question | **open** | L-0027 | **New, from S6.** Blocks any shell build. F3's real fix. Not in Markdown or telemetry |
-| S12 · Where does the orchestration boundary sit? | sub-question | **open** | L-0030 | **Now upstream of the shell decision.** Orchestrator-hosted + executor-local vs pure local-first. Blocks convergence |
+| S12 · Where does the orchestration boundary sit? | sub-question | **covered** | L-0033 | Answered: stays local now, seam preserves the move. Shell no longer blocked on this |
 | S13 · Does R-B survive its re-architecture cost? | sub-question | **open** | L-0029, L-0030 | Contracts make the orchestrator software, not documents. Real cost, untested quality impact |
 | S14 · Do stage-scoped contracts preserve engine quality? | risk | **open** | L-0030 | Codex's sketch + my elaboration. No implementation, no probe. The obvious thin slice to build |
 | A12 · Connect-your-own-agent (Claude/Codex/Hermes) | decision | **covered** | L-0031 | Validated as a precondition of L-A, not a feature. Ship as a guarantee strip |
 | A13 · Show code changes / diffs in the app | decision | **in-progress** | L-0032 | No IP tension — executor-side customer data. Still blocked on S2 permissions. Prefer a PR over a bespoke viewer |
+| S15 · Who is the buyer? | sub-question | **open** | L-0034 | **HIGHEST VALUE OPEN ITEM.** Venture with no known buyer. Needs 5–10 developer interviews — operator-executed, not engine-executed |
+| A14 · Seam / task-contract specification | decision | **covered** | L-0035 | Contract shape + litmus test + CI lint. Untested against a real stage |
+| A15 · Cross-platform notification (F3's real fix) | decision | **covered** | L-0036 | Native per-OS, zero-dependency, 4 events only. **Cheapest win; build first** |
