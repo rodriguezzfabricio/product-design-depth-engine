@@ -46,3 +46,6 @@
 | L-0040 | 2026-08-28 | correction | My "rigor doesn't sell" argument was **false** — Snyk $325M, SonarSource, Datadog, Sentry |
 | L-0041 | 2026-08-28 | finding | **Rigor sells to whoever eats the cost of failure.** Individual dev = adopter, not payer. Reframes S15 |
 | L-0042 | 2026-08-28 | null-result | **No competitor sweep run** — "no one has solved it" is still an assertion. T10/G4 never executed; R3 3rd recurrence |
+| L-0043 | 2026-08-28 | correction | **PREMISE FALSIFIED** — 6 competitors verified incl. `github/spec-kit` 132,004 stars and `nexus-agents` (near-identical pitch, pushed today). A bundle, not a category |
+| L-0044 | 2026-08-28 | correction | Formal verification is **high-value low-volume, not dead** (Certora, Runtime Verification $30–50k/mo). Sonar $4.7B, Tricentis $4.5B. **Payer≠adopter SURVIVED** |
+| L-0045 | 2026-08-28 | correction | Interviews measure statements, not purchases. Need a **paid behavioural test**; "abandonment under real latency" is the risk. Next milestone is not a UI |

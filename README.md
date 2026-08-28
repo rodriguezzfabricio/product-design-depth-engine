@@ -8,11 +8,13 @@ Product and UI design for the **Depth Engine** — research, decisions, and the 
 
 ## Status
 
-**Confirm gate cleared. Project-type `decision`. In E7 — answering the shell sub-questions. NOT converged.**
+**⛔ Founding premise falsified. Sent back to E2/E3. Design work is on hold.**
+
+"No one has had a solution for this" is checkably false — `github/spec-kit` has **132,004 stars** and five other products were verified. See [`research/08`](research/08-does-anyone-need-this.md) §7. The next milestone is not a UI; it is one real ledger on one real external problem in front of one person willing to pay.
 
 Operator decisions: shell = **local web app served by the CLI** · first user = **external developers, as a product** · sequencing = **decision run first**.
 
-Coverage: **16 covered · 8 in-progress · 17 open**, out of a closed list of 41 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
+Coverage: **18 covered · 9 in-progress · 15 open**, out of a closed list of 42 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
 
 ## Start here
 

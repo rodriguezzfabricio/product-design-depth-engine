@@ -2,7 +2,13 @@
 
 **You were right about the sequence, and the reason is that we skipped two stages of your own engine.**
 Run `20260828-123823-depth-engine-product-ui`.
-**⚠ Law L-A UNSATISFIED on this pass.** Codex hit a usage limit mid-check and died terminally. Everything below is **single-family** — a Claude model reasoning about a market — and has had no adversarial pass. Per your prior report's X-003, rate-limit errors never trigger fallback and nothing resumes by itself. Retry the check before acting on §4.
+**✅ Law L-A SATISFIED — check re-run 2026-08-28 after credits were restored. All three claims OVERTURNED. See §7, which is the most important section in this repository.**
+
+---
+
+> ## ⛔ READ §7 FIRST
+>
+> **"No one has had a solution for it before" is false.** Six existing products were named and I verified every one. GitHub itself ships spec-driven development at **132,004 stars**. A product describing itself as *"Governance substrate for your AI coding agents — adversarial review, drift-detected rules, immutable audit"* was pushed to **today**. Sections 2 through 5 below were written before this was known, and §3's claim that formal verification failed commercially is **also wrong**. §7 has the corrections.
 
 ---
 
@@ -67,3 +73,74 @@ This pass established the **category base rate**. It did **not** establish who e
 - Snyk's $325.0M and the funding total come from an aggregator, not from company filings. The formal-verification and static-analysis findings come from peer-reviewed and arXiv sources and are the strongest evidence in this document.
 - §4 is my synthesis. It is clean, which under L-A means it deserves more scrutiny, not less — and it has had none.
 - No claim here establishes that anyone will pay for the Depth Engine. **The base rate for the category is encouraging; that is not the same as demand for your product,** and no amount of further desk research closes that gap.
+
+---
+
+# 7. The cross-family verdict — all three claims overturned
+
+Codex ran with restored credits. **Nothing survived.** Every competitor below was independently verified by me against GitHub's API or by HTTP request on 2026-08-28, because accepting citations unopened is a defect this run has already committed three times.
+
+## 7.1 Your premise is falsified. There are competitors, and one of them is GitHub.
+
+> "The founder's 'no solution before' premise is already falsified, so it is not the deepest remaining uncertainty. The harder risks are differentiation, measurable quality improvement, workflow tolerance, and payment."
+
+| Product | What it does | Verified |
+|---|---|---|
+| **[GitHub Spec Kit](https://github.github.com/spec-kit/)** | intent → spec → plan → tasks → implementation; agent-independent workflows, checklists, cross-artifact analysis | **`github/spec-kit`, 132,004 stars**, pushed 2026-08-28 |
+| **[Nexus Agents](https://github.com/nexus-substrate/nexus-agents)** | *"Governance substrate for your AI coding agents — adversarial review, drift-detected rules, immutable audit, closed-loop telemetry"* | **18 stars**, pushed 2026-08-28 |
+| **[Sigil](https://runsigil.com/)** | markdown spec → hidden verification scenarios → allow/review/block verdict, **signed append-only ledger** | HTTP 200 |
+| **[Findry](https://findry.ai/platform)** | requirement-to-production governance, policy gates, **hash-chained evidence ledger** | HTTP 200 |
+| **[Kiro](https://kiro.dev/)** | prompts → executable specifications, documented decisions, correctness validation, parallel agents | HTTP 200 |
+| **[Augment Intent](https://www.augmentcode.com/guides/intent-walkthrough-prompt-to-merge)** | coordinator → implementer → verifier, living spec, decomposition, adversarial roles, human gates | HTTP 200 |
+
+**Two of these hurt specifically.** GitHub Spec Kit is *GitHub*, with 132k stars and a commit today — spec-driven development is not an unserved idea, it is a first-party feature of the platform your customers already use. And **Nexus Agents' one-line description is nearly your pitch verbatim** — adversarial review, immutable audit, telemetry — at 18 stars, pushed today. Someone is building this right now, independently, and they are early enough that you cannot dismiss them and cannot yet out-run them either.
+
+**What survives, and it is real but much narrower than you believed:**
+
+> "I found no verified product matching every Depth Engine stage — especially **failure-history mining plus mandatory cross-family attack** — but that makes its differentiation **a particular workflow bundle, not a new category.**"
+
+So you are not one-of-one. You are a **distinct bundle in a category that already has GitHub in it.** That is a survivable position — Linear entered issue-tracking against Jira and won on craft — but it is a completely different strategic posture from "nobody has seen this before," and it changes what you must prove. E3 (failure-history mining) and mandatory cross-family attack are your two genuinely uncommon stages. **Those are the product. Lead with them.**
+
+## 7.2 My rigor-doesn't-sell argument was wrong — and so was my correction to it
+
+I already retracted "rigor products don't sell" in §3. Codex went further: **formal verification supports real businesses too**, so §2's framing of it as the nearest corpse is also wrong.
+
+| Evidence | Figure |
+|---|---|
+| **Sonar** (static analysis / code quality) | raised **$412M at a $4.7B valuation** |
+| **Tricentis** (continuous testing, quality engineering) | **$1.33B investment at a $4.5B valuation** |
+| **Synopsys** application-security / static-analysis division | sold for **up to $2.1B** |
+| **Runtime Verification** (formal methods) | 100+ clients, **$30K–$50K monthly engagements** |
+| **Certora** (formal verification) | seven years operating, **$100B+ of protected assets** |
+| **AdaCore / SPARK** | ongoing formal-methods business |
+
+Formal verification is not a graveyard. It is **high-value, low-volume** — five-figure monthly engagements rather than seat licences. That is a different business shape, not a failed one.
+
+> "The sharper threat is not 'rigor never sells.' It is that **individual developers may not personally bear enough failure cost; enterprises, security teams, and regulated sectors usually do.**"
+
+**This confirms §4 rather than overturning it.** The payer-is-not-the-adopter hypothesis survived a genuine attack — the only conclusion in this run that has. Treat it as the most load-bearing finding you own.
+
+## 7.3 My advice to go do interviews was too weak
+
+> "Interviews are neither necessary nor sufficient to establish willingness to pay: **they measure statements, not purchases.** Paid pilots, preorders, retention, workflow telemetry, and abandonment under real latency provide stronger evidence."
+
+I told you to talk to 5–10 developers. That is diagnosis, not validation — people will tell you a rigor tool sounds great and then never pay for it, and *abandonment under real latency* is exactly your risk, because your engine is slow on purpose and nobody discovers whether they will tolerate that by being asked.
+
+**Corrected sequence:**
+
+1. **Competitor / graveyard research** — partly done here, §7.1. Still needs the T10 sweep at source.
+2. **A minimal testable workflow** — the smallest thing that runs end to end and produces one real ledger on someone else's real problem.
+3. **A paid behavioural test** — a paid pilot or preorder. Money changing hands is the only evidence that settles this.
+
+Interviews run alongside all three as diagnosis. What survives of my original claim is only the narrow part: **desk research alone cannot validate demand for the Depth Engine specifically.**
+
+## 7.4 What this changes
+
+- **Stop saying "no one has solved this."** It is checkably false and it will cost you credibility with the first informed person who hears it. Say instead: *spec-driven development is a real and crowded category; almost nobody does failure-history mining or mandatory cross-family adversarial attack, and here is a ledger proving mine ran.*
+- **Go read Nexus Agents' repository.** It is 18 stars and public. It is the closest thing to you that exists, and it is free intelligence.
+- **The buyer hypothesis is now your most-tested asset.** Enterprises, security teams, and regulated sectors bear failure cost. Individual developers do not.
+- **The next milestone is not a UI.** It is one real ledger from one real external problem, in front of one person willing to pay.
+
+## 7.5 Ceiling on §7
+
+Codex's figures for Sonar, Tricentis, Synopsys, Runtime Verification and Certora come with primary-source URLs (press releases and company pages) that **I did not open** — I verified the six competitor products, not the six financial figures. The competitor verification is solid: star counts and push dates came from GitHub's API, and the four sites returned HTTP 200. I did **not** read Kiro's, Sigil's, Findry's or Augment's actual capabilities beyond Codex's descriptions, so the feature claims in §7.1's middle column are Codex's characterisation, not mine.
