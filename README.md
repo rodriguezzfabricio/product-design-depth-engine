@@ -12,12 +12,13 @@ Product and UI design for the **Depth Engine** — research, decisions, and the 
 
 Operator decisions: shell = **local web app served by the CLI** · first user = **external developers, as a product** · sequencing = **decision run first**.
 
-Coverage: **16 covered · 6 in-progress · 14 open**, out of a closed list of 36 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
+Coverage: **16 covered · 8 in-progress · 17 open**, out of a closed list of 41 → [`REGISTER.md`](depth-engine/runs/20260828-123823-depth-engine-product-ui/memory/REGISTER.md)
 
 ## Start here
 
 | Read | For |
 |---|---|
+| [`research/08-does-anyone-need-this.md`](research/08-does-anyone-need-this.md) | **Newest.** Whether the category sells at all, what killed the last generation of rigor tools, and who the payer probably is. **No cross-family check ran** |
 | [`research/07-the-seam.md`](research/07-the-seam.md) | **Newest.** The task-contract seam, the CI lint that enforces it, cross-platform notifications, and the buyer gap |
 | [`research/06-ip-boundary-and-agents.md`](research/06-ip-boundary-and-agents.md) | The IP boundary, connect-your-own-agent, and what the UI can honestly show. Supersedes `02` §3 |
 | [`research/05-shell-decision.md`](research/05-shell-decision.md) | Where the shell decision stands, and the claims that did not survive |

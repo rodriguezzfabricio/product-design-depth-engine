@@ -40,3 +40,9 @@
 | L-0034 | 2026-08-28 | finding | **Biggest risk is now non-technical** — venture with no known buyer; zero non-operator interviews. Not reducible by engine research |
 | L-0035 | 2026-08-28 | decision | Seam spec: self-contained task contracts, no stage/law identifiers; enforced as a **CI lint**, not a promise |
 | L-0036 | 2026-08-28 | finding | `node-notifier` 5.5M/wk but **stale 2 years**; write ~30 lines native instead to keep the CLI dependency-free. Fire on 4 events only |
+| L-0037 | 2026-08-28 | null-result | **L-A UNSATISFIED** — codex died on quota mid-verdict. X-003 reproducing; F3/F7 happening to this run |
+| L-0038 | 2026-08-28 | finding | **E2 and E3 were skipped** — files 02–07 rest on no domain-expert or failure pass. Operator's instinct = the protocol |
+| L-0039 | 2026-08-28 | finding | **The graveyard**: formal verification <1% adoption; rigor tools die of noise — which is F8 + F1 exactly |
+| L-0040 | 2026-08-28 | correction | My "rigor doesn't sell" argument was **false** — Snyk $325M, SonarSource, Datadog, Sentry |
+| L-0041 | 2026-08-28 | finding | **Rigor sells to whoever eats the cost of failure.** Individual dev = adopter, not payer. Reframes S15 |
+| L-0042 | 2026-08-28 | null-result | **No competitor sweep run** — "no one has solved it" is still an assertion. T10/G4 never executed; R3 3rd recurrence |

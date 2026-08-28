@@ -2,7 +2,7 @@
 
 > One row per tracked item (question / task / risk / aspect / sub-question). Status drives convergence (E8). Append rows and update their status; never delete a row (L-B). On resume, the first `open` or `in-progress` row is where you continue.
 
-**Closed list: 36 rows · 16 covered · 6 in-progress · 14 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
+**Closed list: 41 rows · 16 covered · 8 in-progress · 17 open.** The denominator is closed — that is what makes this countable, and it is the same property that makes the UI's coverage bar honest (see L-0014).
 
 > **Counted mechanically, not by hand.** A hand-written header on this file initially read "25 rows · 8 · 5 · 12" and was wrong in all four numbers. The error was caught by `grep -c` against the status cells, not by review. That is the Tier-0 argument from the prior report §6 in miniature: the mechanical check is the only reproducible one, and it should own this header. **If the UI renders a coverage bar, it must count the rows itself — never trust a summary line, including this one.**
 
@@ -46,3 +46,8 @@
 | S15 · Who is the buyer? | sub-question | **open** | L-0034 | **HIGHEST VALUE OPEN ITEM.** Venture with no known buyer. Needs 5–10 developer interviews — operator-executed, not engine-executed |
 | A14 · Seam / task-contract specification | decision | **covered** | L-0035 | Contract shape + litmus test + CI lint. Untested against a real stage |
 | A15 · Cross-platform notification (F3's real fix) | decision | **covered** | L-0036 | Native per-OS, zero-dependency, 4 events only. **Cheapest win; build first** |
+| E2 · Become the domain expert | stage | **in-progress** | L-0038, L-0039 | Skipped originally. Category base rate now covered; direct prior art NOT |
+| E3 · Mine the world's scar tissue | stage | **in-progress** | L-0039 | Formal verification is the nearest corpse; rigor tools die of noise (= F8 + F1) |
+| S16 · Direct competitor / prior-art sweep | sub-question | **open** | L-0042 | **T10 + G4 from the PDF, never run.** Needs Scrapling. Until then "no one has solved it" is unverified |
+| S17 · Is the payer different from the adopter? | sub-question | **open** | L-0041 | Working hypothesis: dev adopts, org pays. Test with humans — ask who gets blamed, not who would pay |
+| R6 · L-A unsatisfied on the market pass | risk | **open** | L-0037 | Codex quota death. Claims in `research/08` §4 have had zero adversarial scrutiny |
